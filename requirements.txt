@@ -1,0 +1,10 @@
+python-dotenv==1.0.1
+pydantic==2.7.1
+sqlalchemy==2.0.30
+sqlalchemy[asyncio]==2.0.30
+asyncpg==0.29.0
+asyncio==3.4.3
+passlib==1.7.4
+pyside6==6.7.1
+qasync==0.27.1
+

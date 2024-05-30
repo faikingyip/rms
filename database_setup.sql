@@ -1,0 +1,9 @@
+CREATE USER rmsuser WITH PASSWORD 'rmsuser';
+
+CREATE DATABASE rms
+    WITH
+    OWNER = rmsuser
+    ENCODING = 'UTF8';
+
+GRANT ALL PRIVILEGES ON DATABASE rms TO rmsuser;
+
