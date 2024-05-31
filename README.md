@@ -51,7 +51,7 @@ pytest
 
 ## To fix
 
-### To fix: Incorrect setting of constants
+### Incorrect setting of constants
 There are some constants in the PropertiesPanel that need to be
 calculated per shape rather than be a constant.
 

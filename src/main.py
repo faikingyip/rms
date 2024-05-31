@@ -5,7 +5,7 @@ import sys
 from PySide6.QtWidgets import QApplication
 from qasync import QEventLoop
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from src.app.ops import app_ops_user
 from src.configuration import Configuration
 from src.persistence.database import session
