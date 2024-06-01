@@ -89,3 +89,23 @@ class DeleteMenuError(OpsBaseError):
 class GetMenuByIdError(OpsBaseError):
     def __init__(self, original_exception: Optional[Exception] = None):
         super().__init__(str(original_exception))
+
+
+class CreateTagError(OpsBaseError):
+    def __init__(self, original_exception: Optional[Exception] = None):
+        super().__init__(str(original_exception))
+
+
+class DeleteTagError(OpsBaseError):
+    def __init__(self, original_exception: Optional[Exception] = None):
+        super().__init__(str(original_exception))
+
+
+class GetTagByIdError(OpsBaseError):
+    def __init__(self, original_exception: Optional[Exception] = None):
+        super().__init__(str(original_exception))
+
+
+class GetTagListError(OpsBaseError):
+    def __init__(self, original_exception: Optional[Exception] = None):
+        super().__init__(str(original_exception))

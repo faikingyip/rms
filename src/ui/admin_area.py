@@ -4,6 +4,7 @@ from qasync import asyncSlot
 
 from src.ui.menus import Menus
 from src.ui.tables import Tables
+from src.ui.tags import Tags
 from src.ui.ui_utils import clear_layout
 
 
@@ -15,6 +16,9 @@ class AdminArea(QWidget):
 
     def init_ui(self):
 
+        tags_button = QPushButton("Tag")
+        tags_button.clicked.connect(self.on_tags_button_clicked_handler)
+
         items_button = QPushButton("Items")
         items_button.clicked.connect(self.on_items_button_clicked_handler)
 
@@ -25,6 +29,7 @@ class AdminArea(QWidget):
         tables_button.clicked.connect(self.on_tables_button_clicked_handler)
 
         v_box_left = QVBoxLayout()
+        v_box_left.addWidget(tags_button)
         v_box_left.addWidget(items_button)
         v_box_left.addWidget(menus_button)
         v_box_left.addWidget(tables_button)
@@ -37,6 +42,12 @@ class AdminArea(QWidget):
         self.setLayout(h_box)
 
     @Slot()
+    def on_tags_button_clicked_handler(self):
+        clear_layout(self.main_content_layout)
+        tags = Tags()
+        self.main_content_layout.addWidget(tags)
+
+    @Slot()
     def on_items_button_clicked_handler(self):
         clear_layout(self.main_content_layout)
         pass
@@ -46,13 +57,11 @@ class AdminArea(QWidget):
     @Slot()
     def on_menus_button_clicked_handler(self):
         clear_layout(self.main_content_layout)
-
         menus = Menus()
         self.main_content_layout.addWidget(menus)
 
     @Slot()
     def on_tables_button_clicked_handler(self):
         clear_layout(self.main_content_layout)
-
         tables = Tables()
         self.main_content_layout.addWidget(tables)
